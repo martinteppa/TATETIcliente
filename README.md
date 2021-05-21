@@ -1,6 +1,6 @@
 # Primera version de tateti
 
-Primera version de una aplicacion React de tateti comunicandosé con una api-rest. Link del server django-rest: https://github.com/martinteppa/TATETIserver. al correr los npm commands, hay que registrar dos usuarios distintos, y uno tiene que loguearse en pestaña incognito. Luego uno tiene que crear partida. El segundo debe ver el listado de partidas disponibles y meterse. Toda la resolucion del tateti está en el backend
+Primera version de una aplicacion React de tateti comunicandosé con una api-rest. Link del server django-rest: https://github.com/martinteppa/TATETIserver. Al correr los npm commands, hay que registrar dos usuarios distintos, y uno tiene que loguearse en pestaña incognito. Luego uno tiene que crear partida (jugador X). El segundo debe ver el listado de partidas disponibles y meterse (jugador O). Toda la resolucion del tateti está en el backend
 
 ## Dudas que me fueron surgiendo:
 
