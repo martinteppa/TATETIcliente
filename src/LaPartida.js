@@ -109,7 +109,6 @@ function LaPartida() {
         </div>
       </div>
       {partida.message}
-      {tablero}
     </>
   );
 }
