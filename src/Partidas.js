@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import "./App.css";
 
 function Partidas() {
@@ -17,7 +17,6 @@ function Partidas() {
           newArray.push(element.codigo);
         });
         setdata(newArray);
-        console.log(data);
       })
       .catch((error) => console.error("error"));
   };
@@ -26,13 +25,32 @@ function Partidas() {
     loadPartidas();
   }, []);
 
+  const entrarAPartida = (e) => {
+    e.preventDefault();
+    let data = {
+      username: localStorage.getItem("username"),
+      token: localStorage.getItem("token"),
+    };
+
+    if (data.username != null && data.token != null) {
+      let newUrl = e.target.id + "/";
+      console.log(newUrl);
+      axios.post(newUrl, data).then((resp) => {
+        window.location = "/" + e.target.id;
+      });
+    } else {
+      alert("debes loguearte antes");
+    }
+  };
+
   return (
     <div className="listadopartidas">
       <ul>
         {data.map((element) => (
-          <li>
-            <Link key={element}>{element}</Link>
-            agregar un to al link
+          <li key={element}>
+            <a href="" onClick={entrarAPartida} id={element}>
+              entrar a {element}
+            </a>
           </li>
         ))}
       </ul>

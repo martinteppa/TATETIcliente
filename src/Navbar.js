@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function Navbar() {
@@ -49,6 +49,10 @@ function Navbar() {
       .catch((message) => alert("Ya esta en partida!!"));
   };
 
+  const reloadPartidas = () => {
+    window.location = "/";
+  };
+
   window.addEventListener("resize", showButton);
   return (
     <nav className="navbar">
@@ -66,7 +70,7 @@ function Navbar() {
             </li>
           )}
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/" className="nav-links" onClick={reloadPartidas}>
               Partidas
             </Link>
           </li>
@@ -91,7 +95,7 @@ function Navbar() {
           )}
           {!localStorage.getItem("token") && (
             <li className="nav-item">
-              <Link to="/login" className="nav-links">
+              <Link to="/login" className="nav-links" onClick={closeMobileMenu}>
                 Login
               </Link>
             </li>

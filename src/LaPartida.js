@@ -29,10 +29,6 @@ function LaPartida() {
     "s",
     "s",
   ]);
-  let data = {
-    username: localStorage.getItem("username"),
-    token: localStorage.getItem("token"),
-  };
 
   useEffect(() => {
     axios
@@ -50,13 +46,15 @@ function LaPartida() {
           jugadorX: resp.data.jugadorX,
           jugadorO: resp.data.jugadorO,
         });
-        console.log(partida);
+
         demountTablero(resp.data.tablero);
-        console.log(tablero);
       })
       .catch((err) => {
         console.log(err);
       });
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 2000);
   }, []);
 
   const demountTablero = (a) => {
@@ -74,10 +72,10 @@ function LaPartida() {
     console.log(putJson);
     axios
       .put(url, putJson)
-      .then((resp) => {
-        console.log(resp);
-      })
-      .catch(alert("refresque"));
+      .then((resp) => {})
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <>
