@@ -10,6 +10,6 @@ Mas alla de que si lo llego a encarar nuevamente haría otras cosas distintas, m
 
 Lo he resuelto basicamente almacenando el token del usuario en localStorage. Pero obviamente es muy insegura dicha estrategia. Que estrategias son las mas optimas en React?
 
-### * SOCKETS:
+### * Sockets:
 
 La actualización en vivo del tablero del tateti la hice con UseEffect y setTimeOut, cada dos segundos metiendo request GET al tablero. Queria saber si no era mejor encararlo con sockets y como. Estuve investigando pero ya era meterme en otra cosa que me iba a demorar otra tarde. 
