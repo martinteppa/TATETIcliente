@@ -6,7 +6,7 @@ Primera version de una aplicacion React de tateti comunicandosé con una api-res
 
 Mas alla de que si lo llego a encarar nuevamente haría otras cosas distintas, me surgieron varias dudas que no he tenido tiempo de respondermelas:
 
-#### * Sistema de autenticacion del lado del cliente:
+### * Sistema de autenticacion del lado del cliente:
 
 Lo he resuelto basicamente almacenando el token del usuario en localStorage. Pero obviamente es muy insegura dicha estrategia. Que estrategias son las mas optimas en React?
 
